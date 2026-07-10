@@ -90,7 +90,7 @@ SDA: GP20, SCL: GP21
 static uint32_t DMA_bufC[(CAM_MAX_WIDTH * CAM_MAX_HEIGHT * CAM_COLOR / 4) + 16] __attribute__((aligned(32)));
 static uint32_t DMA_bufD[(CAM_MAX_WIDTH * CAM_MAX_HEIGHT * CAM_COLOR / 4) + 16] __attribute__((aligned(32)));
 
-#include "OV7725_PDS.h"
+#include "OV7725_PDS.h"// メモリ確保後に入れる / write this After Allocating memory
 
 // ピン定義 / Pin definitions
 #define CAM_D2    2
