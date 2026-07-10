@@ -75,7 +75,7 @@ void setup() {
 
     // カメラ/PIO/DMA一括設定
     //Bulk configuration for Camera/PIO/DMA
-    camera.initstart(OV7725_PDS::RES_QVGA_Color);
+    camera.initstart(OV7725_PDS::RES_QVGA_color);
     /* Frame rate:30fps(fixed)
         RES_QVGA_color  : 320*240 YUV - Data:[Y0-8bit][U-8bit][Y1-8bit][V-8bit]
         RES_QQVGA_color : 160*120 YUV - Data:[Y0-8bit][U-8bit][Y1-8bit][V-8bit]
@@ -114,7 +114,8 @@ void setup() {
 int lastProcessedBufferID = -1;
 void loop() {
     // 現在、DMAが書き込みを完了した「生のバッファID（0または1）」を直接取得
-    // Directly obtain the "raw buffer ID (0 or 1)" that the DMA has currently finished writing to int currentReadyID = camera.getReadyBufferID();
+    // Directly obtain the "raw buffer ID (0 or 1)" that the DMA has currently finished writing to 
+    int currentReadyID = camera.getReadyBufferID();
     if(currentReadyID != lastProcessedBufferID) {
         uint32_t* rawBufferPtr = nullptr;
         if (currentReadyID == 0) {
