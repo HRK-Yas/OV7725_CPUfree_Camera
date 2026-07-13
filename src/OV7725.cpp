@@ -327,6 +327,7 @@ bool OV7725::init(ResolutionMode mode) {
     writeRegister(0xA8, 0x65);
     writeRegister(0x0E, 0x41);
     writeRegister(0x37, 0x00);
+    writeRegister(0x3E, 0x00);
 
     delay(30);
     return true;
