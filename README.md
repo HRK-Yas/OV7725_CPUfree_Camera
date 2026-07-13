@@ -1,8 +1,8 @@
-# OV7725_Camera_Library
+# OV7725_CPUfree_Camera
 
 **Zero-CPU-Overhead OV7725 Camera Streaming Library for RP2350**
 
-**RP2350向けゼロCPUオーバーヘッド OV7725 カメラストリーミングライブラリ**
+**RP2350向けゼロCPUオーバーヘッド OV7725 カメラストリーミングライブラリ(90fps)**
 
 CPU を一切使わずに OV7725 カメラから連続画像取得を行う Arduino ライブラリです。DMA と PIO を駆使した完全自動化により、RP2350 の 2 つの CPU コアをカメラキャプチャに邪魔されず、AI/ML やリアルタイム処理に専念させることができます。
 
